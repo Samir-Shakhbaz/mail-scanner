@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Emails</title>
+</head>
+<body>
+<h1>Emails</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Sender</th>
+        <th>Subject</th>
+        <th>Content</th>
+        <th>Received Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="email : ${emails}">
+        <td th:text="${email.sender}"></td>
+        <td th:text="${email.subject}"></td>
+        <td th:text="${email.content}"></td>
+        <td th:text="${email.receivedDate}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
